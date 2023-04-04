@@ -1,7 +1,7 @@
 ../Core/Src/main.c:88:5:main	8	static
-../Core/Src/main.c:162:6:SystemClock_Config	72	static
-../Core/Src/main.c:199:13:MX_TIM1_Init	32	static
-../Core/Src/main.c:245:13:MX_GPIO_Init	40	static
-../Core/Src/main.c:306:6:TurnNumber	16	static
-../Core/Src/main.c:366:6:TurnSegment	16	static
-../Core/Src/main.c:416:6:Error_Handler	4	static,ignoring_inline_asm
+../Core/Src/main.c:161:6:SystemClock_Config	72	static
+../Core/Src/main.c:198:13:MX_TIM1_Init	32	static
+../Core/Src/main.c:244:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:305:6:TurnNumber	16	static
+../Core/Src/main.c:365:6:TurnSegment	16	static
+../Core/Src/main.c:415:6:Error_Handler	4	static,ignoring_inline_asm

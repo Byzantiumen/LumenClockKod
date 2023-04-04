@@ -67,15 +67,15 @@ TIM_HandleTypeDef htim1;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM1_Init(void);
+
+/* USER CODE BEGIN PFP */
 void TurnNumber(int number);
 void TurnSegment(int number);
-/* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int del = 300;
+int delay = 4;
 int second = 0;
 int minute = 0;
 int hour = 0;
@@ -123,29 +123,28 @@ int main(void)
 	  /*SEG_1 - GPIOC, SEG_8_7_6_5_4 - GPIOA, SEG_3_2_1 - GPIOB*/
 	  TurnSegment(1); // 1 second
 	  TurnNumber(second%10);
-	  HAL_Delay(0.8);
+	  HAL_Delay(delay);
 	  TurnSegment(2);// 2 second
 	  TurnNumber(second/10);
-	  HAL_Delay(0.8);
+	  HAL_Delay(dedelayl);
 	  TurnSegment(3); // tire
 	  TurnNumber(10);
-	  HAL_Delay(0.8);
-	  TurnSegment(4);
+	  HAL_Delay(delay);
+	  TurnSegment(4);// 1 minute
 	  TurnNumber(minute%10);
-	  HAL_Delay(0.8);
-	  TurnSegment(5);
+	  HAL_Delay(delay);
+	  TurnSegment(5);//2 minute
 	  TurnNumber(minute/10);
-	  HAL_Delay(0.8);
+	  HAL_Delay(delay);
 	  TurnSegment(6); // tire
 	  TurnNumber(10);
-	  HAL_Delay(0.8);
-	  TurnSegment(7); // tire
+	  HAL_Delay(delay);
+	  TurnSegment(7); //1 hour
 	  TurnNumber(hour%10);
-	  HAL_Delay(0.8);
-	  TurnSegment(8); // tire
-	  //TurnNumber(hour/10);
-	  TurnNumber(0);
-	  HAL_Delay(0.8);
+	  HAL_Delay(delay);
+	  TurnSegment(8); //2 hour
+	  TurnNumber(hour/10);
+	  HAL_Delay(delay);
 
 
     /* USER CODE END WHILE */
